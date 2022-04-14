@@ -10,6 +10,7 @@
     Fornavn:<input id="fornavn">
     Adresse: <input id="adresse">
     <button onclick="regKunder()">Registrer Kunde</button>
+    <button onclick="delet()">Slett Alle</button>
     <div id="output"></div>
 
     <script>
@@ -38,6 +39,11 @@
                 $("#output").html(ut);
 
             }
+        }
+        function delet(){
+            $.post("/slett", function (data){
+                $("#output").html(data);
+            })
         }
     </script>
 </body>

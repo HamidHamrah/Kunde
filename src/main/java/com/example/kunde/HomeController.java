@@ -21,4 +21,9 @@ public class HomeController {
     public List<Kunde> hentalle(){
         return allekunder;
     }
+    @PostMapping("/slett")
+
+    public void slett(){
+        allekunder.clear();
+    }
 }
